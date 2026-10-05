@@ -1,0 +1,1702 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>つるりんちょ。｜シリーズを知って、お試しセットから</title>
+  <link rel="preload" as="image" href="assets/section_01_fv.webp?v=1791192718346" type="image/webp" fetchpriority="high">
+  <!-- システムフォント使用（WebFont不要） -->
+  <style>
+    :root {
+      --color-primary:  #302D2A;
+      --color-gold:     #E7E1D8;
+      --color-accent:   #8A7866;
+      --color-bg-light: #F5F0E8;
+      --color-bg-dark:  #171615;
+      --color-bg-warm:  #E8E0D5;
+      --color-text:     #111111;
+      --color-cta-bg:   #19A85B;
+      --color-cta-accent: var(--color-cta-bg);
+      --color-cta-accent-start: color-mix(in oklch, var(--color-cta-accent) 88%, white 12%);
+      --color-cta-accent-end: oklch(from var(--color-cta-accent) clamp(0.52, calc(l + 0.05), 0.78) clamp(0.12, calc(c * 1.22), 0.34) h);
+      --lp-body-font: "Hiragino Sans", "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ ProN", "Yu Gothic", YuGothic, "Yu Gothic UI", Meiryo, "メイリオ", sans-serif;
+      --lp-heading-font: "Hiragino Sans", "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ ProN", "Yu Gothic", YuGothic, "Yu Gothic UI", Meiryo, "メイリオ", sans-serif;
+      --lp-calm-font: "Yu Mincho", "YuMincho", "Hiragino Mincho ProN", "Noto Serif JP", serif;
+      --lp-chrome-font: "Hiragino Sans", "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ ProN", "Yu Gothic", YuGothic, "Yu Gothic UI", Meiryo, "メイリオ", sans-serif;
+      --footer-bg: #f4f4f4;
+      --footer-text: #FFFFFF;
+      --footer-text-sub: #FFFFFF;
+      --footer-text-muted: #FFFFFF;
+      --footer-border: #e5e5e5;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html, body { overflow-x: hidden; width: 100%; }
+    body { font-family: "Hiragino Sans", "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ ProN", "Yu Gothic", YuGothic, "Yu Gothic UI", Meiryo, "メイリオ", sans-serif; background: #fff; color: var(--color-text); -webkit-text-size-adjust: 100%; }
+    .lp-container { max-width: 430px; margin: 0 auto; background: #fff; position: relative; line-height: 0; font-size: 0; overflow: hidden; padding-top: 0; }
+    .lp-container.article-lp {
+      --article-pr-height: 22px;
+      padding-top: 0;
+    }
+    .article-top-pr {
+      position: static;
+      width: 100%;
+      min-height: var(--article-pr-height, 22px);
+      padding: 3px 16px 2px;
+      border-bottom: 1px solid #f0ebe3;
+      background: #ffffff;
+      color: #666666;
+      font-family: var(--lp-chrome-font, "Hiragino Sans", "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ ProN", "Yu Gothic", YuGothic, "Yu Gothic UI", Meiryo, "メイリオ", sans-serif);
+      font-size: 12px;
+      font-weight: 300;
+      line-height: 1.4;
+      text-align: right;
+    }
+    .article-lp .lp-header {
+      top: 0;
+    }
+    .section-img { display: block; width: 100%; height: auto; }
+    .section-video-wrap { position: relative; width: 100%; overflow: hidden; line-height: 0; }
+    .section-video-bg { position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: 1; }
+    .section-video-poster { display: block; width: 100%; height: auto; position: relative; z-index: 0; opacity: 0; }
+    .section-video-wrap .section-video-bg:not([src=""]) ~ .section-video-poster { opacity: 0; }
+    .section-video-inline { width: 100%; line-height: 0; }
+    /* HTMLテンプレートセクション */
+    .section-html { line-height: 1.6; font-size: 14px; max-width: 100%; overflow: hidden; background: #fff; position: relative; }
+    .section-html--bg-alt { background: var(--color-bg-light, #F5F0E8); }
+    .section-html--bg-alt:not(.section-html--has-bg) [class*="sec-"]:not([class*="__overlay"]):not([class*="__list"]):not([class*="__question"]):not([class*="__title"]):not([class*="__photo"]):not([class*="__card"]):not([class*="__hero"]):not([class*="__bg"]):not([class*="__button"]):not([class*="__icon"]):not([class*="cta-dual"]) { background: transparent !important; background-color: transparent !important; }
+    .section-html--has-bg { background-size: cover; background-position: center; background-repeat: no-repeat; }
+    .section-html--has-bg::before { content:''; position:absolute; inset:0; z-index:0; }
+    .section-html--has-bg.section-html--light::before { background: rgba(255,255,255,0.7); }
+    .section-html--has-bg.section-html--dark::before { background: rgba(45,24,16,0.7); }
+    .section-html--has-bg > * { position: relative; z-index: 1; }
+    .section-html--has-bg section, .section-html--has-bg [class*="sec-"]:not([class*="__overlay"]):not([class*="__list"]):not([class*="__question"]):not([class*="__title"]):not([class*="__photo"]):not([class*="__card"]):not([class*="__hero"]):not([class*="__bg"]):not([class*="__button"]):not([class*="__icon"]) { background: transparent !important; background-color: transparent !important; }
+    .section-html--dark h1,.section-html--dark h2,.section-html--dark h3 { color: #FFF !important; }
+    .section-html--dark p,.section-html--dark span,.section-html--dark li,.section-html--dark td { color: rgba(255,255,255,0.9) !important; }
+    .section-html > section, .section-html > div, .section-html > footer { max-width: 100% !important; width: 100% !important; margin-left: 0 !important; margin-right: 0 !important; }
+    .section-html img[src=""], .section-html img:not([src]) { display: none !important; }
+    .section-html .sec-reason__image-wrap:empty, .section-html .sec-sol__photo-wrap:empty { display: none !important; }
+    .section-html [class*="__photo-wrap"]:has(img[src=""]), .section-html [class*="__image-wrap"]:has(img[src=""]) { display: none !important; }
+    /* フォント統一（テンプレート個別指定を上書き） */
+    .section-html, .section-html p, .section-html span, .section-html li { font-family: "Hiragino Sans", "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ ProN", "Yu Gothic", YuGothic, "Yu Gothic UI", Meiryo, "メイリオ", sans-serif !important; }
+    .section-html h1, .section-html h2, .section-html h3 { font-family: "Hiragino Sans", "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ ProN", "Yu Gothic", YuGothic, "Yu Gothic UI", Meiryo, "メイリオ", sans-serif !important; }
+    .section-html .sec-faq,
+    .section-html .sec-faq h2,
+    .section-html .sec-faq h3,
+    .section-html .sec-faq p,
+    .section-html .sec-faq li,
+    .section-html .sec-faq span,
+    .section-html .sec-faq label,
+    .section-html .sec-faq div { font-family: var(--lp-chrome-font, "Hiragino Sans", "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ ProN", "Yu Gothic", YuGothic, "Yu Gothic UI", Meiryo, "メイリオ", sans-serif) !important; }
+
+    /* 見出し視認性強化 — 何のセクションか瞬時に伝わるデザイン */
+    .section-html:not(.section-html--article) h2 { font-weight: 600 !important; letter-spacing: 0.04em; line-height: 1.4; }
+    .section-html:not(.section-html--article) h3 { font-weight: 600 !important; letter-spacing: 0.02em; }
+    .section-html:not(.section-html--article) h2::after { content: ''; display: block; width: 40px; height: 3px; background: var(--color-gold); margin: 10px auto 0; border-radius: 2px; }
+    .section-html:not(.section-html--article) .heading-no-line h2::after, .section-html:not(.section-html--article) h2.heading-no-line::after, .section-html:not(.section-html--article) .sec-faq__title::after { content: none; display: none; }
+
+    /* 記事LP専用HTMLレンダー: 読み物・比較表・メモを画像化せずに組む */
+    .article-lp {
+      --article-paper: #ffffff;
+      --article-ink: #111111;
+      --article-muted: #666666;
+      --article-line: #D7D3CE;
+      --article-accent: #67544A;
+      --article-yellow: #EAE5DE;
+      --article-blue-text: #5D6770;
+      --article-linkish-blue: #5D6770;
+      --article-magenta: #70655A;
+      --article-text-gap: 26px;
+      --article-cta-image-width: 558px;
+      --article-weight-regular: 300;
+      --article-weight-bold: 600;
+    }
+    .section-html--article {
+      background: #fff;
+      padding: 0 22px 4px;
+      line-height: 1.9;
+      font-size: 16px;
+      font-weight: var(--article-weight-regular, 300);
+      color: var(--article-ink, var(--color-text, #18251b));
+    }
+    .section-img + .section-html--article,
+    .section-html--article + .section-html--article {
+      margin-top: var(--article-text-gap, 30px);
+    }
+    .section-html--article:nth-of-type(even) {
+      background: #fff;
+    }
+    .section-html--article .article-display-text,
+    .section-html--article h3,
+    .section-html--article p,
+    .section-html--article li,
+    .section-html--article th,
+    .section-html--article td {
+      letter-spacing: 0 !important;
+    }
+    .section-html--article .article-display-text {
+      position: relative;
+      margin: 0 auto 20px;
+      padding: 0 4px;
+      /* 大きい一文は「大きい本文」。一律のブランド色・飾り下線で見出し化しない
+         （article-typography-decoration.md「Article Display Text Decoration」）。
+         強調は文中の decoration token（[[marker:]] 等）側で行う */
+      color: #111111;
+      font-size: 29px;
+      line-height: 1.4;
+      font-weight: var(--article-weight-bold, 600);
+      text-align: center;
+      text-wrap: balance;
+    }
+    .section-html--article .article-display-text .article-em--marker,
+    .section-html--article .article-display-text .article-em--fill {
+      color: #111111;
+    }
+    .section-html--article .article-display-text .article-em--red {
+      color: var(--article-accent, #e60012);
+    }
+    .section-html--article .article-display-text .article-em--blue {
+      color: var(--article-blue-text, #0000ff);
+    }
+    .section-html--article .article-display-text .article-em--magenta {
+      color: var(--article-magenta, rgb(255,0,255));
+    }
+    .section-html--article .article-display-text .article-em--redmarker-white,
+    .section-html--article .article-display-text .article-em--redmarker-yellow {
+      text-decoration: none;
+    }
+    .section-html--article .article-headline--bottom,
+    .section-html--article .article-headline--end,
+    .section-html--article .article-headline--ending,
+    .section-html--article .article-headline--after-content,
+    .section-html--article .article-headline--punchline {
+      margin-top: calc(var(--article-text-gap, 30px) * 1.1);
+      margin-bottom: 0;
+    }
+    .article-block {
+      border: 0;
+      border-radius: 0;
+      padding: 0;
+      background: #fff;
+      box-shadow: none;
+      text-align: left;
+    }
+    .article-block > :last-child,
+    .article-block > :last-child p:last-child {
+      margin-bottom: 0;
+    }
+    .article-badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-bottom: 10px;
+    }
+    .article-badges span {
+      display: inline-flex;
+      align-items: center;
+      min-height: 24px;
+      padding: 3px 9px;
+      border-radius: 4px;
+      background: color-mix(in srgb, var(--color-cta-bg, #E84C3D) 88%, white 12%);
+      color: #fff;
+      font-size: 12px;
+      font-weight: var(--article-weight-bold, 600);
+    }
+    .article-kicker {
+      display: inline-block;
+      margin-bottom: 4px;
+      padding: 2px 8px;
+      background: #fff4a8;
+      color: #111111;
+      font-size: 13px;
+      font-weight: var(--article-weight-bold, 600);
+    }
+    .article-section-label {
+      margin: 0 0 10px;
+      text-align: center;
+      color: #111111;
+      font-size: 16px;
+      font-weight: var(--article-weight-bold, 600);
+      line-height: 1.45;
+    }
+    .article-em {
+      font-weight: var(--article-weight-bold, 600);
+    }
+    .article-em--marker {
+      background: linear-gradient(transparent 58%, var(--article-yellow, rgb(255,255,0)) 58%);
+      padding: 0 2px 2px;
+    }
+    .article-em--fill {
+      background: var(--article-yellow, rgb(255,255,0));
+      padding: 1px 4px;
+    }
+    .article-em--red {
+      color: var(--article-accent, #e60012);
+      text-decoration: underline;
+      text-decoration-thickness: 2px;
+      text-underline-offset: 3px;
+    }
+    .article-em--blue {
+      color: var(--article-blue-text, #0000ff);
+      text-decoration: underline;
+      text-decoration-thickness: 2px;
+      text-underline-offset: 3px;
+    }
+    .article-em--linkish {
+      color: var(--article-linkish-blue, #4682b4);
+      text-decoration: underline;
+      text-decoration-thickness: 1px;
+      text-underline-offset: 3px;
+    }
+    .article-em--magenta {
+      color: var(--article-magenta, rgb(255,0,255));
+      font-weight: var(--article-weight-bold, 600);
+    }
+    .article-em--size-only {
+      color: inherit;
+      font-weight: inherit;
+      background: linear-gradient(transparent 62%, var(--article-yellow, rgb(255,255,0)) 62%);
+      padding: 0 2px 2px;
+      text-decoration: none;
+    }
+    .article-em--redmarker-white,
+    .article-em--redmarker-yellow {
+      display: inline;
+      padding: 1px 7px 2px;
+      background: var(--article-accent, #e60012);
+      color: #ffffff;
+      font-weight: var(--article-weight-bold, 600);
+      line-height: 1.45;
+      text-decoration: none;
+      -webkit-box-decoration-break: clone;
+      box-decoration-break: clone;
+    }
+    .article-em--redmarker-yellow {
+      color: var(--article-yellow, rgb(255,255,0));
+      text-shadow: 0 1px 0 rgba(0,0,0,0.22);
+    }
+    .article-em--size-md { font-size: 1.15em; }
+    .article-em--size-lg { font-size: 1.25em; }
+    .article-em--size-xl { font-size: 1.45em; }
+    .article-em--size-xxl { font-size: 1.65em; }
+    .section-html--article .article-display-text .article-em--size-lg { font-size: 1.12em; }
+    .section-html--article .article-display-text .article-em--size-xl,
+    .section-html--article .article-display-text .article-em--size-xxl { font-size: 1.2em; }
+    .check-item .article-em--size-xl,
+    .check-item .article-em--size-xxl,
+    .says .article-em--size-xl,
+    .says .article-em--size-xxl {
+      font-size: 1.25em;
+    }
+    .article-lead-text {
+      /* リードは見出し風コールアウト箱にしない（見出し禁止・中央揃え基本）。
+         プレーンな中央揃えテキストとして本文より一段強い太さだけ持つ */
+      margin: 0 auto 22px;
+      padding: 0;
+      border: 0;
+      background: transparent;
+      color: #222822;
+      font-size: 17px;
+      font-weight: var(--article-weight-bold, 600);
+      line-height: 1.75;
+      text-align: center;
+      text-wrap: wrap;
+    }
+    .section-html--article-reason {
+      padding-top: 8px;
+      padding-bottom: 18px;
+    }
+    .article-heading-image {
+      margin: 0 0 14px;
+      line-height: 0;
+    }
+    .article-heading-image__img {
+      display: block;
+      width: 100%;
+      height: auto;
+      border-radius: 6px;
+    }
+    .article-block--article-reason .article-lead-text {
+      margin-bottom: 10px;
+      color: #121a16;
+      font-size: 19px;
+      line-height: 1.6;
+    }
+    .article-paragraphs--reason {
+      margin-bottom: 14px;
+    }
+    .article-paragraphs--reason p {
+      margin-bottom: 12px;
+      line-height: 1.85;
+    }
+    .article-block--article-reason .article-figure {
+      margin-top: 14px;
+      margin-bottom: 0;
+    }
+    .article-block--article-reason .article-figure__img {
+      border-radius: 6px;
+    }
+    .article-emphasis {
+      margin: 0 auto var(--article-text-gap, 26px);
+      padding: 16px 16px 15px;
+      border: 1px solid #CFE4C3;
+      border-radius: 8px;
+      background: linear-gradient(180deg, #F7FAF2 0%, #FFFFFF 100%);
+      text-align: left;
+      color: #143A20;
+      font-size: 19px;
+      line-height: 1.62;
+      font-weight: var(--article-weight-bold, 600);
+      box-shadow: 0 5px 14px rgba(31, 79, 42, 0.07);
+    }
+    .article-paragraphs p {
+      margin: 0 auto 23px;
+      color: #222822;
+      font-size: 16px;
+      line-height: 2;
+      font-weight: var(--article-weight-regular, 300);
+      /* 記事LPの本文は中央揃えが基本（article-typography-decoration.md「Text Alignment」）。
+         左揃えは枠内部品（チェックリスト・吹き出し・表・注釈）側で個別指定する */
+      text-align: center;
+      text-wrap: wrap;
+    }
+    .article-paragraphs--summary p {
+      font-weight: var(--article-weight-bold, 600);
+    }
+    .article-table-wrap {
+      margin: 0 0 var(--article-text-gap, 30px);
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+    }
+    .article-table {
+      width: 100%;
+      min-width: 360px;
+      border-collapse: collapse;
+      background: #fff;
+      font-size: 13px;
+      line-height: 1.5;
+    }
+    .article-table th,
+    .article-table td {
+      border: 1px solid #cfd8dc;
+      padding: 9px 8px;
+      vertical-align: top;
+      text-align: left;
+    }
+    .article-table thead th {
+      background: var(--color-primary, #1587C8);
+      color: #fff;
+      font-weight: var(--article-weight-bold, 600);
+    }
+    .article-table tbody th {
+      width: 32%;
+      background: #eef8ff;
+      color: #111111;
+      font-weight: var(--article-weight-bold, 600);
+    }
+    .article-checklist {
+      display: grid;
+      gap: 11px;
+      margin: 0 0 var(--article-text-gap, 26px);
+      list-style: none;
+    }
+    .check-item {
+      display: flex;
+      gap: 12px;
+      align-items: center;
+      justify-content: flex-start;
+      min-height: 58px;
+      padding: 13px 15px;
+      background: linear-gradient(90deg, #F7FAF2 0%, #FFFFFF 100%);
+      border: 1px solid #D8E8D0;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(31, 79, 42, 0.08);
+      font-size: 16px;
+      font-weight: var(--article-weight-bold, 600);
+      line-height: 1.55;
+      text-align: left;
+    }
+    .check-item > span:last-child {
+      flex: 1 1 auto;
+      max-width: none;
+    }
+    .check-icon {
+      flex: 0 0 28px;
+      width: 28px;
+      height: 28px;
+      object-fit: contain;
+    }
+    span.check-icon {
+      display: inline-grid;
+      place-items: center;
+      width: 22px;
+      height: 22px;
+      border-radius: 6px;
+      background: #52A530;
+      box-shadow: inset 0 -1px 0 rgba(0,0,0,0.14);
+    }
+    span.check-icon::before { content: '\2713'; color: #fff; font-size: 13px; line-height: 18px; font-weight: var(--article-weight-bold, 600); }
+    .article-point-boxes {
+      display: grid;
+      gap: 13px;
+      margin: 0 0 var(--article-text-gap, 26px);
+    }
+    .article-point-box {
+      position: relative;
+      padding: 16px;
+      border: 1px solid #D8E8D0;
+      border-radius: 8px;
+      background: #F7FAF2;
+      box-shadow: 0 5px 14px rgba(31, 79, 42, 0.06);
+      text-align: left;
+    }
+    .article-point-box__label {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 78px;
+      height: 28px;
+      margin: 0 0 12px;
+      padding: 0 12px;
+      border-radius: 4px;
+      background: #52A530;
+      color: #fff;
+      font-size: 12px;
+      font-weight: var(--article-weight-bold, 600);
+      box-shadow: none;
+    }
+    .article-point-box h3 {
+      margin: 0 0 12px;
+      color: #143A20;
+      font-size: 20px;
+      line-height: 1.4;
+      font-weight: var(--article-weight-bold, 600);
+    }
+    .article-point-box p {
+      margin: 0;
+      color: #222822;
+      font-size: 16px;
+      line-height: 1.8;
+      font-weight: var(--article-weight-regular, 300);
+    }
+    .article-balloons {
+      display: grid;
+      gap: 12px;
+      margin: 0 0 var(--article-text-gap, 30px);
+    }
+    .balloon.article-balloon {
+      display: flex;
+      align-items: flex-start;
+      width: 100%;
+      margin: 0;
+      padding: 0;
+      overflow: visible;
+      text-align: left;
+    }
+    .faceicon { order: 0; flex: 0 0 70px; }
+    .face-avatar {
+      display: grid;
+      place-items: center;
+      width: 70px;
+      height: 70px;
+      border: 2px solid #d5d5d5;
+      border-radius: 50%;
+      background: #fff8d7;
+      color: var(--article-ink, #111111);
+      font-size: 16px;
+      line-height: 1;
+      font-weight: var(--article-weight-bold, 600);
+      box-sizing: border-box;
+      overflow: hidden;
+    }
+    .face-avatar img {
+      display: block;
+      width: 116%;
+      height: 116%;
+      object-fit: cover;
+    }
+    .chatting { order: 1; flex: 1 1 auto; width: auto; min-width: 0; }
+    .says {
+      position: relative;
+      display: block;
+      width: auto;
+      margin: 0 0 0 20px;
+      padding: 12px 14px;
+      border: 2px solid #d5d5d5;
+      border-radius: 8px;
+      background: #fff;
+      box-sizing: border-box;
+      font-size: 16px;
+      line-height: 1.65;
+      font-weight: var(--article-weight-regular, 300);
+      text-align: left;
+    }
+    .says::before {
+      content: '';
+      position: absolute;
+      top: 20px;
+      left: -18px;
+      z-index: 2;
+      border: 8px solid transparent;
+      border-right: 10px solid #ffffff;
+    }
+    .says::after {
+      content: '';
+      position: absolute;
+      top: 18px;
+      left: -22px;
+      z-index: 1;
+      border: 10px solid transparent;
+      border-right: 12px solid #d5d5d5;
+    }
+    .balloon.icon-right .faceicon { order: 1; }
+    .balloon.icon-right .chatting { order: 0; }
+    .balloon.icon-right .says { margin: 0 20px 0 0; }
+    .balloon.icon-right .says::before {
+      left: auto;
+      right: -10px;
+      border: 8px solid transparent;
+      border-left: 10px solid #ffffff;
+      border-right: 0;
+    }
+    .balloon.icon-right .says::after {
+      left: auto;
+      right: -13px;
+      border: 10px solid transparent;
+      border-left: 12px solid #d5d5d5;
+      border-right: 0;
+    }
+    .says p {
+      margin: 0;
+      padding: 0;
+      letter-spacing: 0;
+    }
+    .article-figure__img {
+      display: block;
+      width: 100%;
+      height: auto;
+      border-radius: 4px;
+    }
+    .article-figure {
+      margin: 0 0 var(--article-text-gap, 26px);
+      padding: 8px;
+      border: 1px solid #DCE8D5;
+      border-radius: 8px;
+      background: #F7FAF2;
+      box-shadow: 0 6px 16px rgba(31, 79, 42, 0.06);
+    }
+    .article-figure--plain-source {
+      padding: 0;
+      border: 0;
+      border-radius: 0;
+      background: transparent;
+      box-shadow: none;
+    }
+    .article-figure--plain-source .article-figure__img {
+      border-radius: 0;
+    }
+    .article-checklist-visual {
+      margin: 0 0 18px;
+      padding: 8px;
+      border: 1px solid #DCE8D5;
+      border-radius: 8px;
+      background: #F7FAF2;
+      box-shadow: 0 6px 16px rgba(31, 79, 42, 0.06);
+    }
+    .article-checklist-visual__img {
+      display: block;
+      width: 100%;
+      height: auto;
+      border-radius: 4px;
+    }
+    .article-figure + .article-paragraphs {
+      margin-top: 6px;
+    }
+    .article-point-visual {
+      margin: 0 0 var(--article-text-gap, 30px);
+    }
+    .article-point-visual__img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+    .article-block--article-summary .article-point-visual {
+      margin-bottom: 8px;
+    }
+    .article-block--article-summary .article-legal-notes {
+      margin-top: 0;
+    }
+    .article-figure figcaption {
+      margin-top: 7px;
+      margin-bottom: 18px;
+      color: #666666;
+      font-size: 12px;
+      line-height: 1.55;
+      text-align: left;
+    }
+    .article-point-visual figcaption {
+      margin-top: 7px;
+      color: #666666;
+      font-size: 12px;
+      line-height: 1.55;
+      text-align: left;
+    }
+    .article-quote {
+      margin: 0 0 var(--article-text-gap, 30px);
+      padding: 14px 14px 12px;
+      border-left: 6px solid var(--color-gold, #C4A265);
+      background: #fffaf0;
+      border-radius: 0 6px 6px 0;
+    }
+    .article-quote p {
+      margin: 0;
+      font-size: 16px;
+      line-height: 1.7;
+      font-weight: var(--article-weight-bold, 600);
+    }
+    .article-quote cite {
+      display: block;
+      margin-top: 7px;
+      color: #666666;
+      font-size: 12px;
+      font-style: normal;
+      text-align: right;
+    }
+    .article-note {
+      margin: 0 0 var(--article-text-gap, 30px);
+      padding: 18px;
+      border: 2px solid #f0d668;
+      border-top: 5px solid var(--article-accent, #e60012);
+      border-radius: 8px;
+      background: #fff8d7;
+      text-align: center;
+    }
+    .article-note h3 {
+      display: inline-block;
+      margin: 0 0 10px;
+      padding: 5px 10px;
+      background: var(--article-accent, #e60012);
+      color: #fff;
+      border-radius: 4px;
+      font-size: 12px;
+      line-height: 1.4;
+      font-weight: var(--article-weight-bold, 600);
+    }
+    .article-note p {
+      margin: 0;
+      font-size: 16px;
+      line-height: 1.8;
+      font-weight: var(--article-weight-bold, 600);
+    }
+    .article-legal-notes {
+      /* 注釈は箱で囲わない（グレー面・角丸・padding なしのプレーンな小さい文字）。
+         事務的に冷静なテキストとして画像/本文の直下に置くだけにする */
+      margin: 8px auto 0;
+      padding: 0;
+      border-radius: 0;
+      background: transparent;
+      color: var(--article-muted, #666666);
+      font-size: 12px;
+      line-height: 1.6;
+      text-align: left;
+    }
+    .article-legal-notes p {
+      margin: 4px 0 0;
+    }
+    /* ── 記事LP motion 部品（article-lp-common-sample から移植） ── */
+    /* swaying_text: 転換の一言を高速で小さく揺らす（[[sway:...]] トークン） */
+    .article-lp .swaying-text {
+      display: block;
+      margin: 64px 0;
+      color: #e60012;
+      font-size: 20px;
+      line-height: 1.4;
+      font-weight: var(--article-weight-bold, 600);
+      animation: article-swaying-text 0.25s infinite;
+      will-change: transform;
+    }
+    @keyframes article-swaying-text {
+      0%, 100% { transform: translate(0, 0) rotate(0deg); }
+      25% { transform: translate(2px, 2px) rotate(1deg); }
+      50% { transform: translate(0, 2px) rotate(0deg); }
+      75% { transform: translate(2px, 0) rotate(-1deg); }
+    }
+    /* downArrow: 3連の下向き太矢印。movebtn 付きで上下バウンド、無しで静止3連 */
+    .article-lp .downArrow {
+      display: flex;
+      justify-content: center;
+      box-sizing: border-box;
+      margin: 40px auto;
+    }
+    .article-lp .downArrow > span {
+      width: 64px;
+      height: 42px;
+      padding: 0 7px;
+      box-sizing: border-box;
+    }
+    .article-lp .downArrow > span::before {
+      content: "";
+      display: block;
+      width: 50%;
+      height: 40%;
+      margin: 0 auto;
+      background: #db5331;
+    }
+    .article-lp .downArrow > span::after {
+      content: "";
+      display: block;
+      width: 100%;
+      height: 60%;
+      background:
+        linear-gradient(to top right, transparent 49%, #db5331 50%) top left/50% 100% no-repeat,
+        linear-gradient(to top left, transparent 49%, #db5331 50%) top right/50% 100% no-repeat;
+    }
+    .article-lp .movebtn {
+      align-items: flex-start;
+      animation: article-btn-bounce 1.5s ease infinite;
+    }
+    @keyframes article-btn-bounce {
+      0%, 100% { transform: translate(0, 0); }
+      50% { transform: translate(0, -8px); }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .article-lp .swaying-text,
+      .article-lp .movebtn {
+        animation: none;
+      }
+    }
+    /* 印刷時: fixed の sticky CTA は translateY(100%) の隠し分がページ下端から
+       次ページ先頭に滲み出て本文に被るため、印刷では出さない（PDFレビュー対策） */
+    @media print {
+      .article-lp .sticky-cta {
+        display: none !important;
+      }
+    }
+    /* visual 直下アンカー注釈: figure / point_visual の中で画像に密着させる */
+    .article-legal-notes--anchored {
+      margin: 6px 0 0;
+    }
+    /* render:"image" セクション直下の注釈: 画面左右20pxの本文余白に合わせる */
+    .article-legal-notes--image {
+      margin: 6px 20px 40px;
+    }
+    .article-lp .section-html--article,
+    .article-lp .section-html--article p,
+    .article-lp .section-html--article li,
+    .article-lp .section-html--article td,
+    .article-lp .section-html--article figcaption,
+    .article-lp .section-html--article cite,
+    .article-lp .section-html--article .says,
+    .article-lp .section-html--article .article-lead-text,
+    .article-lp .section-html--article .article-paragraphs p,
+    .article-lp .section-html--article .article-point-box p,
+    .article-lp .section-html--article .article-legal-notes p {
+      font-weight: var(--article-weight-regular, 300) !important;
+    }
+    .article-lp .section-html--article .article-display-text,
+    .article-lp .section-html--article h3,
+    .article-lp .section-html--article th,
+    .article-lp .section-html--article .article-em,
+    .article-lp .section-html--article .article-emphasis,
+    .article-lp .section-html--article .check-item,
+    .article-lp .section-html--article .article-table thead th,
+    .article-lp .section-html--article .article-table tbody th,
+    .article-lp .section-html--article .article-point-box__label,
+    .article-lp .section-html--article .article-point-box h3,
+    .article-lp .section-html--article .article-note h3,
+    .article-lp .section-html--article .article-note p,
+    .article-lp .section-html--article .article-quote p,
+    .article-lp .section-html--article .face-avatar,
+    .article-lp .section-html--article span.check-icon::before,
+    .article-lp .section-html--article .article-badges span,
+    .article-lp .section-html--article .article-kicker,
+    .article-lp .section-html--article .article-section-label {
+      font-weight: var(--article-weight-bold, 600) !important;
+    }
+    .article-lp .section-html--article .article-em--size-only {
+      font-weight: inherit !important;
+    }
+
+    /* グローバルテキスト強調クラス（全セクション共通） */
+    .section-html em[class*="em-"] { font-style: normal; }
+    .section-html .em-big { font-size: 1.3em; font-weight: 600; }
+    .section-html .em-num { font-size: 1.4em; font-weight: 600; letter-spacing: 0; font-family: 'Helvetica Neue', Arial, sans-serif !important; }
+    .section-html .em-marker { background: linear-gradient(transparent 60%, rgba(255, 200, 0, 0.35) 60%); display: inline; padding-bottom: 2px; }
+    .section-html .em-underline { border-bottom: 3px solid var(--color-gold); padding-bottom: 2px; }
+    .section-html .em-zabuton { background: var(--color-primary); color: #fff; padding: 2px 8px; border-radius: 4px; display: inline-block; font-weight: 600; }
+    .section-html .em-shimmer { display: inline-block; background: linear-gradient(110deg, currentColor 40%, var(--color-gold, #C4A265) 50%, currentColor 60%); background-size: 200% 100%; -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; animation: em-shimmer-sweep 3s ease-in-out infinite; }
+    .section-html .em-glow { text-shadow: 0 0 12px var(--color-accent, rgba(232,72,72,0.5)); }
+    @keyframes em-shimmer-sweep { 0% { background-position: 200% 0; } 100% { background-position: -200% 0; } }
+
+    /* Header */
+    .lp-header { background: #302D2A; min-height: 58px; padding: 0; position: fixed; top: 0; left: 50%; transform: translateX(-50%); width: 100%; max-width: 430px; z-index: 1000; border-bottom: 1px solid rgba(255,255,255,0.14); display: flex; align-items: stretch; justify-content: space-between; gap: 0; box-shadow: 0 6px 18px rgba(0,0,0,0.18); overflow: hidden; }
+    .lp-header-logo { font-family: var(--lp-chrome-font, "Hiragino Sans", "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ ProN", "Yu Gothic", YuGothic, "Yu Gothic UI", Meiryo, "メイリオ", sans-serif); font-size: 18px; font-weight: 600; color: #FFFFFF; letter-spacing: 0.08em; text-decoration: none; display: flex; align-items: center; height: 58px; min-width: 0; padding: 0 14px; flex: 1 1 auto; }
+    .lp-header-logo--text { max-width: 100%; overflow-wrap: anywhere; line-height: 1.18; letter-spacing: 0.04em; }
+    .lp-header-logo--text.lp-header-logo--calm { font-family: var(--lp-chrome-font, var(--lp-calm-font, "Yu Mincho", "YuMincho", "Hiragino Mincho ProN", "Noto Serif JP", serif)); font-weight: 600; letter-spacing: 0.06em; }
+    .lp-header-logo-img { height: 44px; max-height: calc(100% - 8px); max-width: min(230px, calc(100vw - 178px)); width: auto; display: block; object-fit: contain; }
+    .lp-header-cta { font-family: var(--lp-chrome-font, "Hiragino Sans", "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ ProN", "Yu Gothic", YuGothic, "Yu Gothic UI", Meiryo, "メイリオ", sans-serif); flex-shrink: 0; display: inline-flex; align-items: center; justify-content: center; min-height: 58px; padding: 0 16px; background: linear-gradient(105deg, var(--color-cta-bg) 0%, var(--color-cta-bg) 40%, rgba(255,255,255,0.34) 49%, var(--color-cta-bg) 58%, color-mix(in srgb, var(--color-cta-bg) 76%, #8A0030) 100%); background-size: 230% 100%; color: #fff; font-size: 14px; font-weight: 600; line-height: 1; text-decoration: none; box-shadow: inset 0 1px 0 rgba(255,255,255,0.22); white-space: nowrap; letter-spacing: 0.02em; animation: ctaBgShine 3.8s cubic-bezier(0.22,1,0.36,1) infinite; }
+
+    /* FAQ */
+    .faq-section { padding: 40px 20px; background: var(--color-bg-dark); line-height: 1.6; font-size: 14px; }
+    .faq-title { font-family: "Hiragino Sans", "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ ProN", "Yu Gothic", YuGothic, "Yu Gothic UI", Meiryo, "メイリオ", sans-serif; font-size: 22px; font-weight: 600; text-align: center; color: var(--color-gold); margin-bottom: 24px; letter-spacing: 0.08em; }
+    .faq-item { border-bottom: 1px solid rgba(196,162,101,0.2); }
+    .faq-question { display: flex; align-items: center; justify-content: space-between; padding: 16px 0; cursor: pointer; user-select: none; }
+    .faq-q-text { font-size: 14px; font-weight: 600; color: rgba(255,255,255,0.9); flex: 1; }
+    .faq-q-text::before { content: 'Q. '; color: var(--color-gold); font-family: "Hiragino Sans", "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ ProN", "Yu Gothic", YuGothic, "Yu Gothic UI", Meiryo, "メイリオ", sans-serif; font-weight: 600; }
+    .faq-toggle { width: 24px; height: 24px; position: relative; flex-shrink: 0; margin-left: 12px; }
+    .faq-toggle::before, .faq-toggle::after { content: ''; position: absolute; background: var(--color-gold); transition: transform 0.3s; }
+    .faq-toggle::before { width: 14px; height: 2px; top: 11px; left: 5px; }
+    .faq-toggle::after  { width: 2px; height: 14px; top: 5px; left: 11px; }
+    .faq-item.open .faq-toggle::after { transform: rotate(90deg); }
+    .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.3s ease; }
+    .faq-a-text { padding: 0 0 16px; font-size: 13px; line-height: 1.8; color: rgba(255,255,255,0.6); }
+    .faq-a-text::before { content: 'A. '; color: var(--color-accent); font-weight: 600; }
+
+    /* Footer */
+    .footer { padding: 32px 20px calc(32px + 80px); background: var(--color-bg-dark); color: rgba(255,255,255,0.6); text-align: center; font-size: 11px; line-height: 1.8; }
+    .footer-brand { font-family: var(--lp-chrome-font, "Hiragino Sans", "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ ProN", "Yu Gothic", YuGothic, "Yu Gothic UI", Meiryo, "メイリオ", sans-serif); font-size: 16px; color: var(--color-gold); margin-bottom: 12px; letter-spacing: 0.1em; text-align: center; }
+    .footer-logo-img { height: 32px; width: auto; display: inline-block; opacity: 0.9; }
+    .footer-company { font-family: var(--lp-chrome-font, "Hiragino Sans", "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ ProN", "Yu Gothic", YuGothic, "Yu Gothic UI", Meiryo, "メイリオ", sans-serif); font-size: 13px; color: rgba(255,255,255,0.7); margin: 8px 0; letter-spacing: 0.04em; }
+    .footer-tel { display: inline-flex; align-items: center; gap: 6px; font-size: 14px; color: rgba(255,255,255,0.85); text-decoration: none; padding: 8px 20px; border: 1px solid rgba(255,255,255,0.2); border-radius: 24px; margin: 12px 0; }
+    .footer-divider { width: 40px; height: 1px; background: rgba(255,255,255,0.15); margin: 16px auto; }
+    .footer-links { margin: 16px 0; display: flex; flex-direction: column; align-items: center; gap: 10px; }
+    .footer-links a { font-family: var(--lp-chrome-font, "Hiragino Sans", "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ ProN", "Yu Gothic", YuGothic, "Yu Gothic UI", Meiryo, "メイリオ", sans-serif); color: rgba(255,255,255,0.5); text-decoration: none; font-size: 12px; letter-spacing: 0.02em; }
+    .footer-copyright { margin-top: 16px; font-size: 11px; color: rgba(255,255,255,0.3); }
+    .footer.footer--minimal-light { padding: 40px 24px 8px; background: var(--footer-bg, var(--color-primary)); color: var(--footer-text, #fff); border-top: 1px solid var(--footer-border, rgba(255,255,255,0.18)); }
+    .footer.footer--minimal-light .footer-tel,
+    .footer.footer--minimal-light .footer-divider { display: none; }
+    .footer.footer--minimal-light .footer-brand,
+    .footer.footer--minimal-light .footer-company { font-family: var(--lp-chrome-font, "Hiragino Sans", "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ ProN", "Yu Gothic", YuGothic, "Yu Gothic UI", Meiryo, "メイリオ", sans-serif); font-size: 16px; font-weight: 600; color: var(--footer-text, #fff); margin: 0 0 32px; letter-spacing: 0.04em; }
+    .footer.footer--minimal-light .footer-logo-img { height: 32px; margin-bottom: 20px; }
+    .footer.footer--minimal-light .footer-links { margin: 0 0 20px; padding-bottom: 40px; gap: 10px; }
+    .footer.footer--minimal-light .footer-links a { font-family: var(--lp-chrome-font, "Hiragino Sans", "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ ProN", "Yu Gothic", YuGothic, "Yu Gothic UI", Meiryo, "メイリオ", sans-serif); color: var(--footer-text-sub, rgba(255,255,255,0.82)); font-size: 12px; font-weight: 600; text-decoration: underline; text-underline-offset: 3px; }
+    .footer.footer--minimal-light .footer-copyright { margin-top: 0; color: var(--footer-text-muted, rgba(255,255,255,0.58)); font-size: 11px; letter-spacing: 0.02em; }
+
+    /* ===== CTA（CVR最大化デザイン） ===== */
+    .cta-section { padding: var(--cta-section-padding-top, 24px) 16px var(--cta-section-padding-bottom, 32px); text-align: center; line-height: 1.5; font-size: 14px; background: var(--color-primary, #333333); }
+    .article-lp .cta-section {
+      box-sizing: border-box;
+      width: 100%;
+      max-width: none;
+      margin: var(--article-text-gap, 30px) 0;
+      padding: 0 20px;
+      background: #fff !important;
+      text-align: center;
+      border-radius: 0;
+      box-shadow: none;
+    }
+    .article-lp .cta-micro {
+      display: block;
+      margin: 0 0 10px;
+      padding: 0;
+      background: transparent;
+      color: #111111;
+      border-radius: 0;
+      font-size: 15px;
+      font-weight: var(--article-weight-bold, 600);
+      line-height: 1.5;
+      letter-spacing: 0;
+    }
+    .article-lp .cta-img-button {
+      width: min(calc(100vw - 48px), var(--article-cta-image-width, 558px)) !important;
+      max-width: 100% !important;
+      margin: 0 auto;
+      transform-origin: center center;
+      animation: articleCtaPuyo 1.6s ease-in infinite;
+    }
+    .article-lp .cta-img-button--animated::before {
+      content: '';
+      display: block;
+      animation: ctaMaskedShimmer 3s ease-in-out infinite;
+    }
+    .article-lp .sticky-img-button {
+      animation: none;
+    }
+    .article-lp .cta-section .cta-img-button.cta-img-button--html {
+      width: min(calc(100vw - 48px), var(--article-cta-image-width, 558px)) !important;
+      max-width: 100% !important;
+    }
+
+    /* ボタン共通 */
+    .cta-button { display: flex; align-items: center; justify-content: center; gap: 10px; width: 92%; max-width: 360px; margin: 0 auto; padding: 18px 28px; border-radius: 999px; border: 0; text-decoration: none; font-size: 22px; font-weight: 600; color: #fff; letter-spacing: 0.04em; position: relative; overflow: hidden; isolation: isolate; transition: transform 0.15s, box-shadow 0.15s, filter 0.15s; }
+    .cta-button:hover { filter: brightness(1.04); }
+    .cta-button:active { transform: scale(0.97); }
+
+    /* type別グラデーション */
+    .cta-button--emotional { background: linear-gradient(90deg, var(--color-cta-accent-start) 0%, var(--color-cta-accent) 48%, var(--color-cta-accent-end) 100%); box-shadow: 0 8px 16px rgba(0,0,0,0.35); }
+    .cta-button--offer { background: linear-gradient(90deg, var(--color-cta-accent-start) 0%, var(--color-cta-accent) 48%, var(--color-cta-accent-end) 100%); box-shadow: 0 8px 16px rgba(0,0,0,0.35); }
+    .cta-button--rational { background: linear-gradient(90deg, var(--color-cta-accent-start) 0%, var(--color-cta-accent) 48%, var(--color-cta-accent-end) 100%); box-shadow: 0 8px 16px rgba(0,0,0,0.35); }
+    .cta-button--trust { background: linear-gradient(90deg, var(--color-cta-accent-start) 0%, var(--color-cta-accent) 48%, var(--color-cta-accent-end) 100%); box-shadow: 0 8px 16px rgba(0,0,0,0.35); }
+    .cta-button--urgency { background: linear-gradient(90deg, var(--color-cta-accent-start) 0%, var(--color-cta-accent) 48%, var(--color-cta-accent-end) 100%); box-shadow: 0 8px 16px rgba(0,0,0,0.35); }
+    .cta-button--commitment,
+    .cta-button--action { background: linear-gradient(90deg, var(--color-cta-accent-start) 0%, var(--color-cta-accent) 48%, var(--color-cta-accent-end) 100%); box-shadow: 0 8px 16px rgba(0,0,0,0.35); }
+
+    .cta-button::before,
+    .sticky-button::before {
+      content: '';
+      position: absolute;
+      top: -45%;
+      left: -75%;
+      z-index: 1;
+      width: 52%;
+      height: 190%;
+      background: linear-gradient(105deg, transparent 0%, rgba(255,255,255,0.12) 35%, rgba(255,255,255,0.72) 50%, rgba(255,255,255,0.12) 65%, transparent 100%);
+      transform: rotate(18deg);
+      animation: ctaShine 3.4s cubic-bezier(0.22,1,0.36,1) infinite;
+      pointer-events: none;
+    }
+    .cta-button > *,
+    .sticky-button > * {
+      position: relative;
+      z-index: 2;
+    }
+    .sticky-button::before {
+      content: none;
+      display: none;
+      animation: none;
+    }
+    .cta-button-text,
+    .sticky-button-text { line-height: 1.25; }
+
+    /* シェブロン矢印 */
+    .cta-button-chevron,
+    .sticky-button-chevron { display: flex; align-items: center; justify-content: center; width: 30px; height: 30px; border-radius: 50%; background: rgba(255,255,255,0.2); border: 1px solid rgba(255,255,255,0.24); flex-shrink: 0; }
+    .cta-button-chevron::after,
+    .sticky-button-chevron::after { content: ''; display: block; width: 8px; height: 8px; border-top: 2.5px solid #fff; border-right: 2.5px solid #fff; transform: rotate(45deg) translateX(-1px); }
+
+    /* マイクロコピー */
+    .cta-micro { margin: 0 0 10px; font-family: var(--lp-chrome-font, "Hiragino Sans", "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ ProN", "Yu Gothic", YuGothic, "Yu Gothic UI", Meiryo, "メイリオ", sans-serif); font-size: 16px; font-weight: 600; color: var(--cta-section-text, #FFFFFF); letter-spacing: 0.02em; }
+    .cta-dual { width: 100%; display: flex; flex-direction: row; align-items: flex-start; justify-content: center; gap: 4px; padding: 0; }
+    .cta-dual__item { flex: 1 1 0; min-width: 0; display: flex; flex-direction: column; align-items: center; gap: 7px; }
+    .cta-dual__button,
+    .cta-dual .cta-img-button { width: 100%; --cta-img-width: 100%; }
+    .cta-dual__bubble { margin: 0; display: inline-flex; align-items: center; justify-content: center; min-height: 24px; max-width: 100%; padding: 4px 8px 5px; border-radius: 999px; background: #FFFFFF; color: var(--color-primary, #0068B7); font-family: var(--lp-chrome-font, "Hiragino Sans", "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ ProN", "Yu Gothic", YuGothic, "Yu Gothic UI", Meiryo, "メイリオ", sans-serif); font-size: clamp(10px, 3.1vw, 13px); font-weight: 900; line-height: 1.15; letter-spacing: 0; white-space: nowrap; box-shadow: 0 4px 10px rgba(0,0,0,0.12); position: relative; }
+    .cta-dual__bubble::after { content: ''; position: absolute; left: 50%; bottom: -5px; width: 10px; height: 10px; background: #FFFFFF; transform: translateX(-50%) rotate(45deg); border-radius: 2px; }
+    .cta-dual .cta-img-button { height: clamp(62px, 16.4vw, 70px); }
+    .cta-dual .cta-img-button img { position: absolute; inset: 0; width: 100%; height: 100%; opacity: 0; }
+    .cta-dual .cta-img-button__surface { display: block; }
+    .cta-dual .cta-img-button__label { display: flex; font-size: clamp(13.5px, 4vw, 17.5px); inset: 0 12.5% 0 3%; }
+    .cta-img-button__label--compact { gap: 3px; justify-content: center; white-space: nowrap; }
+    .cta-img-button__free { display: inline-flex; align-items: center; justify-content: center; min-width: 24px; padding: 1px 3px 2px; border: 1.4px solid currentColor; border-radius: 5px; font-size: 0.68em; line-height: 1; flex-shrink: 0; }
+    .cta-img-button__main { min-width: 0; line-height: 1; transform: scaleX(0.94); transform-origin: center; }
+    .cta-dual .cta-img-button__arrow { display: block; width: 12%; min-width: 22px; max-width: 28px; right: 2.6%; }
+    .cta-dual .cta-img-button__arrow::after { border-top-width: 3.5px; border-right-width: 3.5px; }
+    .cta-img-button { display: inline-block; position: relative; overflow: visible; clip-path: none; border-radius: 0; transition: transform 0.15s; animation: ctaImgBounce 2.5s ease-in-out infinite; filter: none; width: var(--cta-img-width, calc(100% - 40px)); max-width: none; --cta-img-shadow: drop-shadow(0 5px 8px rgba(0,0,0,0.26)) drop-shadow(0 16px 24px rgba(8,42,58,0.30)); text-decoration: none; isolation: isolate; }
+    .cta-img-button--html { width: var(--cta-img-width, calc(100% - 40px)); max-width: none; }
+    .cta-img-button--product { overflow: visible; clip-path: none; border-radius: 0; }
+    .cta-img-button img { display: block; width: 100%; height: auto; max-width: 100%; margin: 0 auto; filter: var(--cta-img-shadow); opacity: 1; }
+    .cta-img-button__surface { display: none; position: absolute; inset: 0; border-radius: 999px; background: linear-gradient(90deg, var(--cta-button-bg-top, #ff9d00) 0%, var(--cta-button-bg, #ff8500) 46%, var(--cta-button-bg-bottom, #ff6b00) 100%); box-shadow: 0 5px 8px rgba(0,0,0,0.26), 0 16px 24px rgba(8,42,58,0.30), inset 0 2px 0 rgba(255,255,255,0.24); pointer-events: none; z-index: 0; }
+    .cta-img-button__surface::after { content: ''; position: absolute; inset: 2px 2px auto 2px; height: 48%; border-radius: 999px 999px 42% 42%; background: linear-gradient(180deg, rgba(255,255,255,0.24), rgba(255,255,255,0)); pointer-events: none; }
+    .cta-img-button__label { display: none; position: absolute; inset: 0 19% 0 8%; z-index: 2; align-items: center; justify-content: center; color: var(--cta-button-text, #fff); font-family: var(--lp-chrome-font, "Hiragino Sans", "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ ProN", "Yu Gothic", YuGothic, "Yu Gothic UI", Meiryo, "メイリオ", sans-serif); font-size: clamp(20px, 7.2vw, 34px); font-weight: 900; line-height: 1; letter-spacing: 0; text-align: center; white-space: nowrap; text-shadow: 0 2px 3px rgba(0,0,0,0.22); pointer-events: none; }
+    .cta-img-button__arrow { display: none; position: absolute; top: 50%; right: 6.2%; z-index: 2; width: 16.5%; aspect-ratio: 1 / 1; max-width: 54px; min-width: 38px; border-radius: 50%; background: #fff; box-shadow: 0 3px 8px rgba(127,45,0,0.18); transform: translateY(-50%); pointer-events: none; }
+    .cta-img-button__arrow::after { content: ''; position: absolute; top: 50%; left: 48%; width: 28%; height: 28%; border-top: 6px solid var(--cta-button-arrow, #F36C00); border-right: 6px solid var(--cta-button-arrow, #F36C00); border-radius: 2px; transform: translate(-50%, -50%) rotate(45deg); }
+    .cta-img-button:active { transform: scale(0.97); }
+    .cta-img-button--animated::before { content: ''; position: absolute; inset: 0; width: 100%; height: 100%; background: linear-gradient(105deg, transparent 0%, transparent 39%, rgba(255,255,255,0.46) 49%, transparent 59%, transparent 100%); background-size: 260% 100%; background-position: 135% 0; animation: ctaMaskedShimmer 3s ease-in-out infinite; pointer-events: none; z-index: 1; -webkit-mask-image: var(--cta-shine-mask); mask-image: var(--cta-shine-mask); -webkit-mask-size: 100% 100%; mask-size: 100% 100%; -webkit-mask-repeat: no-repeat; mask-repeat: no-repeat; -webkit-mask-position: 0 0; mask-position: 0 0; }
+    @keyframes ctaImgBounce { 0%,100% { transform: scale(1); } 15% { transform: scale(1.05); } 30% { transform: scale(0.97); } 45% { transform: scale(1.02); } 60% { transform: scale(1); } }
+    @keyframes articlePuyoCta {
+      0%, 10%, 60%, 100% { transform: scale(1.09); }
+      30%, 40% { transform: scale(1.01); }
+      50% { transform: scale(1, 1.04); }
+      70% { transform: scale(1.02); }
+    }
+    @keyframes ctaMaskedShimmer { 0%,65%,100% { background-position: 135% 0; } 50% { background-position: -35% 0; } }
+    @keyframes ctaShine { 0%, 58%, 100% { left: -75%; } 38% { left: 125%; } }
+    @keyframes ctaBgShine { 0%, 56%, 100% { background-position: 100% 0; } 36% { background-position: 0 0; } }
+
+    /* 法的表記アコーディオン（CTA 直下） */
+    .legal-accordion { max-width: 430px; margin: 0 auto; padding: 0; background: #e6e6e6; color: #666666; line-height: 1.6; font-size: 11px; }
+    .legal-accordion__toggle { display: none; }
+    .legal-accordion__header { display: flex; align-items: center; justify-content: space-between; gap: 10px; cursor: pointer; padding: 12px 16px; background: #e6e6e6; color: #666666; font-size: 11px; font-weight: 600; text-align: left; }
+    .legal-accordion__header::after { content: '▼'; font-size: 8px; transition: transform 0.3s; color: #666666; }
+    .legal-accordion__toggle:checked ~ .legal-accordion__header::after { transform: rotate(180deg); }
+    .legal-accordion__body { max-height: 0; overflow: hidden; background: #e6e6e6; transition: max-height 0.4s ease; }
+    .legal-accordion__toggle:checked ~ .legal-accordion__body { max-height: 1200px; }
+    .legal-accordion__body p { padding: 12px 16px 16px; margin: 0; background: #e6e6e6; color: #666666; font-size: 11px; font-weight: 600; line-height: 1.8; text-align: left; }
+
+    /* Sticky CTA */
+    .sticky-cta { position: fixed; bottom: 8px; left: 50%; transform: translateX(-50%) translateY(100%); width: 100%; max-width: 430px; padding: 12px 16px calc(14px + env(safe-area-inset-bottom, 0px)); background: transparent; z-index: 100; display: flex; flex-direction: column; align-items: center; transition: transform 0.4s cubic-bezier(0.22,1,0.36,1); pointer-events: none; }
+    .sticky-cta.visible { transform: translateX(-50%) translateY(0); pointer-events: auto; }
+    .sticky-button { display: flex; align-items: center; justify-content: center; gap: 9px; width: 82.8%; max-width: 324px; padding: 16px 25px; border-radius: 999px; border: 0; text-decoration: none; font-size: 20px; font-weight: 600; color: #fff; letter-spacing: 0.04em; background: linear-gradient(90deg, var(--color-cta-accent-start) 0%, var(--color-cta-accent) 48%, var(--color-cta-accent-end) 100%); box-shadow: 0 8px 16px rgba(0,0,0,0.35); animation: none; transition: transform 0.15s; position: relative; overflow: hidden; isolation: isolate; }
+    .sticky-button:active { transform: scale(0.97); }
+    .sticky-button-chevron { width: 27px; height: 27px; }
+    .sticky-button-chevron::after { width: 7px; height: 7px; border-top-width: 2.25px; border-right-width: 2.25px; }
+    .sticky-dual { width: 100%; display: flex; flex-direction: row; align-items: center; justify-content: center; gap: 4px; padding: 0; }
+    .sticky-dual__item { flex: 1 1 0; min-width: 0; }
+    .sticky-dual__button,
+    .sticky-dual .cta-img-button { width: 100%; height: clamp(56px, 14.7vw, 62px); --cta-img-width: 100%; animation: none; }
+    .sticky-dual .cta-img-button img { position: absolute; inset: 0; width: 100%; height: 100%; opacity: 0; }
+    .sticky-dual .cta-img-button__surface { display: block; }
+    .sticky-dual .cta-img-button__label { display: flex; font-size: clamp(13px, 3.85vw, 17px); inset: 0 12.5% 0 3%; }
+    .sticky-dual .cta-img-button__arrow { display: block; width: 12%; min-width: 22px; max-width: 28px; right: 2.6%; }
+    .sticky-dual .cta-img-button__arrow::after { border-top-width: 3.5px; border-right-width: 3.5px; }
+    .sticky-img-button { display: inline-block; position: relative; overflow: visible; clip-path: none; border-radius: 0; width: min(360px, calc(100% - 32px)); max-width: none; animation: none; transition: transform 0.15s; filter: none; --cta-img-shadow: drop-shadow(0 5px 8px rgba(0,0,0,0.30)) drop-shadow(0 16px 24px rgba(0,0,0,0.36)); text-decoration: none; isolation: isolate; }
+    .sticky-img-button.cta-img-button--product { overflow: visible; clip-path: none; border-radius: 0; }
+    .sticky-img-button img { display: block; width: 100%; height: auto; max-width: 100%; filter: var(--cta-img-shadow); opacity: 1; }
+    .sticky-img-button:active { transform: scale(0.97); }
+    .article-lp .cta-img-button,
+    .article-lp .sticky-img-button {
+      --cta-img-shadow: none;
+      filter: none;
+    }
+    .article-lp .cta-img-button {
+      animation: articleCtaPuyo 1.6s ease-in infinite;
+    }
+    .article-lp .sticky-img-button {
+      width: 90%;
+      max-width: 360px;
+    }
+    .sticky-cta--article {
+      padding: 8px 16px calc(6px + env(safe-area-inset-bottom, 0px));
+    }
+    .sticky-cta--article .sticky-img-button {
+      width: min(74%, 300px);
+      max-width: 300px;
+    }
+    .sticky-cta--article .sticky-img-button img {
+      filter: none;
+    }
+    .article-lp .cta-img-button img,
+    .article-lp .sticky-img-button img {
+      filter: none;
+    }
+    /* Animations */
+    @keyframes stickyFloat {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-3px); }
+    }
+    @keyframes articleCtaPuyo {
+      0%, 100% { transform: scale(1.09); }
+      25% { transform: scale(1.01); }
+      50% { transform: scale(1, 1.04); }
+      75% { transform: scale(1.02); }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .article-lp .cta-img-button {
+        animation: none !important;
+      }
+    }
+
+
+
+    /* === PC レスポンシブ === responsive_pc:true LP のみ有効。
+       .lp-container.responsive-pc クラスをトグルとし、SP only LP は影響を受けない。
+       方針 (2026-05-18〜): 全 image セクションで PC 専用画像 (16:9 デフォルト) を生成し
+             中央 1000px の rail に配置。両端の余白は --brand-bg-light の単色塗りで埋め、
+             raster の装飾サイドフレーム画像には依存しない。
+             FAQ / CTA は SP 用背景色をそのまま尊重する。 */
+    :root {
+      --brand-primary: #302D2A;
+      --brand-bg-light: #F5F0E8;
+      --pc-content-width: 1000px;
+      --pc-rail-left-offset: clamp(352px, 28vw, 450px);
+      --pc-rail-width: min(var(--pc-content-width), calc(100vw - var(--pc-rail-left-offset) - 28px));
+    }
+    @media (min-width: 1024px) {
+      .lp-container.responsive-pc {
+        width: 100%;
+        max-width: none;
+        background-color: var(--brand-bg-light);
+        position: relative;
+        overflow: hidden;
+      }
+      .lp-container.responsive-pc > * {
+        position: relative;
+        z-index: 1;
+      }
+      .lp-container.responsive-pc .lp-header {
+        position: fixed;
+        z-index: 1000;
+        width: 100%;
+        max-width: none;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      .lp-container.responsive-pc .lp-header-logo-img {
+        max-width: 360px;
+      }
+      .lp-container.responsive-pc .lp-header-cta {
+        min-height: 58px;
+        min-width: 284px;
+        padding: 8px 32px;
+        font-size: 26px;
+      }
+      /* 全 image セクション: PC 専用画像を 1000px で中央配置 */
+      .lp-container.responsive-pc .section-img,
+      .lp-container.responsive-pc picture .section-img {
+        display: block;
+        width: var(--pc-rail-width);
+        max-width: var(--pc-rail-width);
+        height: auto;
+        margin-left: var(--pc-rail-left-offset);
+        margin-right: auto;
+      }
+      .lp-container.responsive-pc picture {
+        display: block;
+        line-height: 0;
+      }
+
+      .lp-container.responsive-pc .section-html {
+        background: transparent !important;
+        background-color: transparent !important;
+      }
+      .lp-container.responsive-pc .section-html > section,
+      .lp-container.responsive-pc .section-html > div,
+      .lp-container.responsive-pc .section-html > footer {
+        width: var(--pc-rail-width) !important;
+        max-width: var(--pc-rail-width) !important;
+        margin-left: var(--pc-rail-left-offset) !important;
+        margin-right: auto !important;
+      }
+
+      /* === HTML セクション (FAQ / footer): SP 用背景色を尊重し、内側コンテンツを 1080px 中央配置 ===
+         FAQ の cream 背景 (--faq-title-bg / --faq-list-bg: #FFF8E8) はそのまま残す。
+         外側 lp-container の cream tint と近い色味なので分断感は出ない。 */
+      .lp-container.responsive-pc .sec-faq > *,
+      .lp-container.responsive-pc .sec-footer > *,
+      .lp-container.responsive-pc footer.sec-footer > * {
+        max-width: var(--pc-rail-width);
+        margin-left: auto;
+        margin-right: auto;
+      }
+      .lp-container.responsive-pc .sec-faq {
+        max-width: var(--pc-rail-width);
+        background: var(--faq-list-bg, var(--brand-bg-light));
+      }
+      .lp-container.responsive-pc .legal-accordion { width: var(--pc-rail-width); max-width: var(--pc-rail-width); margin-left: var(--pc-rail-left-offset); margin-right: auto; }
+
+      /* PC で FAQ 文字サイズを拡大して読みやすく */
+      .lp-container.responsive-pc .sec-faq__title { font-size: 28px; }
+      .lp-container.responsive-pc .sec-faq__question { font-size: 16px; }
+      .lp-container.responsive-pc .sec-faq__answer-inner { font-size: 14px; line-height: 1.8; }
+
+      /* === CTA セクション: HTML CTA + 画像ボタンを中央 rail にそろえる === */
+      .lp-container.responsive-pc .cta-section {
+        width: var(--pc-rail-width);
+        max-width: var(--pc-rail-width);
+        margin-left: var(--pc-rail-left-offset);
+        margin-right: auto;
+      }
+      .lp-container.responsive-pc .cta-img-button { width: var(--cta-img-width, calc(100% - 40px)); max-width: none; }
+      .lp-container.responsive-pc .cta-section .cta-img-button {
+        width: min(var(--cta-img-width, calc(100% - 64px)), calc(100% - 64px), var(--article-cta-image-width, 558px)) !important;
+        max-width: calc(100% - 64px) !important;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      /* === Sticky CTA: PC では画面下部中央に大きく配置、SP の黒グラデは消す ===
+         transform は SP の translateX(-50%) を必ず保持する (visible 切替の base 形状)。 */
+      .lp-container.responsive-pc ~ .sticky-cta,
+      .responsive-pc .sticky-cta {
+        left: 50%;
+        right: auto;
+        bottom: 0;
+        width: 380px;
+        max-width: calc(100vw - 32px);
+        padding: 16px 16px calc(10px + env(safe-area-inset-bottom, 0px));
+        background: transparent;
+        transform: translateX(-50%) translateY(100%);
+      }
+      .lp-container.responsive-pc ~ .sticky-cta.visible,
+      .responsive-pc .sticky-cta.visible {
+        transform: translateX(-50%) translateY(0);
+      }
+      .responsive-pc .sticky-img-button { width: calc(90% - 68.4px); max-width: none; }
+      .responsive-pc .sticky-img-button img { width: 100%; height: auto; }
+      .responsive-pc .sticky-button { width: 90%; max-width: 324px; padding: 16px 22px; font-size: 20px; }
+
+      /* pc_layout v2: viewport 全幅の 16:9 画像。旧 center_rail は上記を維持し、
+         明示的に full_bleed_image を指定した派生LPだけこの上書きを適用する。 */
+      .lp-container.responsive-pc.pc-layout-full-bleed {
+        width: 100%;
+        max-width: none;
+        background: var(--brand-bg-light);
+        overflow-x: clip;
+      }
+      .lp-container.responsive-pc.pc-layout-full-bleed .pc-fullbleed-picture {
+        display: block;
+        width: 100%;
+        max-width: none;
+        margin: 0;
+        line-height: 0;
+      }
+      .lp-container.responsive-pc.pc-layout-full-bleed .pc-fullbleed-picture .section-img,
+      .lp-container.responsive-pc.pc-layout-full-bleed .section-img {
+        display: block;
+        width: 100%;
+        max-width: none;
+        height: auto;
+        margin: 0;
+      }
+      .lp-container.responsive-pc.pc-layout-full-bleed .section-html {
+        width: 100%;
+        max-width: none;
+        margin: 0;
+        background: transparent !important;
+      }
+      .lp-container.responsive-pc.pc-layout-full-bleed .section-html > section,
+      .lp-container.responsive-pc.pc-layout-full-bleed .section-html > div,
+      .lp-container.responsive-pc.pc-layout-full-bleed .section-html > footer,
+      .lp-container.responsive-pc.pc-layout-full-bleed .sec-faq,
+      .lp-container.responsive-pc.pc-layout-full-bleed .sec-footer,
+      .lp-container.responsive-pc.pc-layout-full-bleed footer.sec-footer,
+      .lp-container.responsive-pc.pc-layout-full-bleed .cta-section {
+        width: 100% !important;
+        max-width: none !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+      }
+      .lp-container.responsive-pc.pc-layout-full-bleed .sec-faq > *,
+      .lp-container.responsive-pc.pc-layout-full-bleed .sec-footer > *,
+      .lp-container.responsive-pc.pc-layout-full-bleed footer.sec-footer > *,
+      .lp-container.responsive-pc.pc-layout-full-bleed .legal-accordion {
+        width: min(1120px, calc(100vw - 64px)) !important;
+        max-width: min(1120px, calc(100vw - 64px)) !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+      }
+      .lp-container.responsive-pc.pc-layout-full-bleed .cta-section .cta-dual,
+      .lp-container.responsive-pc.pc-layout-full-bleed .cta-section .cta-micro,
+      .lp-container.responsive-pc.pc-layout-full-bleed .cta-section > .cta-img-button {
+        width: min(1120px, calc(100vw - 64px));
+        max-width: min(1120px, calc(100vw - 64px));
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+    /* === テンプレートCSS（自動収集） === */
+    
+  /* ============================================================
+L-footer — フッターセクション
+============================================================ */
+
+  /* --- CSS変数（ディレクションから転記） --- */
+  .section-html--footer-n15 {
+    
+    --footer-bg: #f4f4f4;
+    
+    --footer-text: #FFFFFF;
+    
+    --footer-link: #555555;
+    
+    --footer-text-sub: #FFFFFF;
+    
+    --footer-text-muted: #FFFFFF;
+    
+    --footer-border: #e5e5e5;
+    
+  }
+
+  /* --- リセット --- */
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  .section-html--footer-n15 {
+    background: var(--footer-bg, var(--color-primary, #111111)) !important;
+  }
+
+  /* --- フッター骨格（構造は変更禁止） --- */
+  .sec-footer {
+    width: 100%;
+    max-width: 430px;
+    margin: 0 auto;
+    background: var(--footer-bg, var(--color-primary, #111111)) !important;
+    padding: 40px 24px calc(112px + env(safe-area-inset-bottom, 0px));
+    color: var(--footer-text, #111111);
+    text-align: center;
+    font-family:
+      "Hiragino Kaku Gothic ProN", "Hiragino Sans", "Noto Sans JP",
+      sans-serif;
+    line-height: 1.6;
+    border-top: 1px solid var(--footer-border, rgba(17,17,17,0.18));
+  }
+
+  .sec-footer--light {
+    background: var(--footer-bg, var(--color-primary, #111111)) !important;
+    border-top-color: var(--footer-border, rgba(17,17,17,0.18));
+  }
+
+  .sec-footer--light .sec-footer__company {
+    color: var(--footer-text, #111111);
+  }
+
+  .sec-footer--light .sec-footer__links a {
+    color: var(--footer-text-sub, var(--footer-text, #111111));
+  }
+
+  .sec-footer--light .sec-footer__links a:active {
+    color: var(--footer-text, #111111);
+    border-bottom-color: var(--footer-border, rgba(17,17,17,0.18));
+  }
+
+  .sec-footer--light .sec-footer__copyright {
+    color: var(--footer-text-muted, var(--footer-text, #111111));
+  }
+
+  .sec-footer--calm .sec-footer__company,
+  .sec-footer--calm .sec-footer__links a {
+    font-family:
+      var(--lp-chrome-font, var(--footer-calm-font, var(--lp-calm-font, "Yu Mincho", "YuMincho", "Hiragino Mincho ProN", "Noto Serif JP", serif)));
+  }
+
+  /* --- ロゴ --- */
+  .sec-footer__logo {
+    display: block;
+    height: 32px;
+    width: auto;
+    margin: 0 auto 20px;
+    opacity: 0.9;
+  }
+
+  /* --- 会社名/学校名 --- */
+  .sec-footer__company {
+    font-family:
+      var(--lp-chrome-font, "Hiragino Kaku Gothic ProN", "Hiragino Sans", "Noto Sans JP", sans-serif);
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--footer-text, #111111);
+    margin-bottom: 32px;
+    letter-spacing: 0.04em;
+  }
+
+  /* --- リンク --- */
+  .sec-footer__links {
+    margin-bottom: 20px;
+    padding-bottom: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .sec-footer__links a {
+    font-family:
+      var(--lp-chrome-font, "Hiragino Kaku Gothic ProN", "Hiragino Sans", "Noto Sans JP", sans-serif);
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--footer-text-sub, var(--footer-text, #111111));
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    letter-spacing: 0.02em;
+    padding: 4px 0;
+    border-bottom: 1px solid transparent;
+    transition: color 0.2s, border-color 0.2s;
+  }
+
+  .sec-footer__links a:active {
+    color: var(--footer-text, #111111);
+    border-bottom-color: var(--footer-border, rgba(17,17,17,0.18));
+  }
+
+  /* --- Copyright --- */
+  .sec-footer__copyright {
+    font-size: 11px;
+    color: var(--footer-text-muted, var(--footer-text, #111111));
+    letter-spacing: 0.02em;
+  }
+
+  .sec-footer--article {
+    max-width: 430px;
+    padding: 24px 20px calc(24px + 72px);
+    background: #f4f4f4 !important;
+    color: #666666;
+    border-top: 1px solid #e5e5e5;
+  }
+
+  .sec-footer--article .sec-footer__company {
+    margin-bottom: 12px;
+    color: #666666;
+    font-size: 12px;
+    font-weight: 300;
+    letter-spacing: 0;
+  }
+
+  .sec-footer--article .sec-footer__links {
+    margin: 0 0 12px;
+    padding-bottom: 0;
+    gap: 8px;
+  }
+
+  .sec-footer--article .sec-footer__links a {
+    color: #666666;
+    font-size: 12px;
+    font-weight: 300;
+    text-decoration: none;
+    letter-spacing: 0;
+    padding: 0;
+  }
+
+  .sec-footer--article .sec-footer__copyright {
+    color: #888888;
+    font-size: 11px;
+    letter-spacing: 0;
+  }
+
+
+  </style>
+  
+</head>
+<body>
+  <div class="lp-container article-lp">
+    <div class="article-top-pr">PR：株式会社髪にドラマを</div>
+
+    <!-- Section 01: fv [IMAGE] -->
+    <img src="assets/section_01_fv.webp?v=1791192718346" alt="髪をいたわる時間を、 日常の楽しみに。 | サロン発想のホームケアを いつものバスタイムへ" class="section-img" width="1086" height="1448" loading="eager" fetchpriority="high" decoding="async" id="section-01" data-section="1">
+
+    <!-- Section 02: article_body [ARTICLE_HTML] -->
+    <div class="section-html section-html--article section-html--article-body section-html--article-body-n2   " data-section="2" data-template="article-body">
+<article class="article-block article-block--article-body">
+<div class="article-paragraphs "><p>一日の終わりに、<br>髪のための時間を。</p>
+<p><span class="article-em article-em--marker">毎日のバスタイム</span>を、<br>少し丁寧なケアの時間に。</p></div>
+<figure class="article-point-visual image-made-visual">
+      <img src="assets/article/visual_02.webp?v=1791193137809" alt="記事内のポイント整理画像" class="article-point-visual__img" width="1672" height="941" loading="lazy" fetchpriority="low" decoding="async">
+      
+      
+    </figure>
+</article>
+    </div>
+
+    <!-- Section 03: article_body [ARTICLE_HTML] -->
+    <div class="section-html section-html--article section-html--article-body section-html--article-body-n3   " data-section="3" data-template="article-body">
+<article class="article-block article-block--article-body">
+<div class="article-paragraphs "><p>サロンで大切にしている発想を、<br>家でのケアにも。</p>
+<p><span class="article-em article-em--magenta">成分と使い方</span>の両方から、<br>日々の習慣を考えたい方へ。</p>
+<p>その選択肢のひとつが、</p></div>
+</article>
+    </div>
+
+    <div class="downArrow movebtn" aria-hidden="true"><span></span><span></span><span></span></div>
+    <!-- Section 04: solution [IMAGE] -->
+    <img src="assets/section_04_solution.webp?v=1791192768524" alt="つるりんちょ。 | シャンプー＆トリートメント サロンの処理剤を起点に 生まれたホームケア" class="section-img" width="1448" height="1086" loading="lazy" fetchpriority="low" decoding="async" id="section-04" data-section="4">
+    <div class="article-legal-notes article-legal-notes--image"><p>※写真はシリーズ本品の紹介です。販売対象のお試しセットは後半で紹介します。</p></div>
+
+
+    <!-- CTA: cta1 -->
+    <div class="cta-section visible" style="background: #302D2A; --cta-section-text: #FFFFFF;">
+      <a href="https://shop.kaminidoramawo.jp/shop/products/tr_tri_ast_ver1_sac" class="cta-img-button cta-img-button--html cta-img-button--animated" aria-label="お試しセットをチェック" style="--cta-shine-mask: url(&quot;assets/cta/cta_button.png&quot;); --cta-button-aspect: 6.0371; --cta-button-bg: #19A85B; --cta-button-bg-top: #42B879; --cta-button-bg-bottom: #16904E; --cta-button-text: #FFFFFF; --cta-button-arrow: #302D2A;">
+        <img src="assets/cta/cta_button.png?v=1791193099186" alt="お試しセットをチェック" class="cta-button-img" width="2113" height="350" loading="lazy" fetchpriority="low" decoding="async">
+        <span class="cta-img-button__surface" aria-hidden="true"></span>
+        <span class="cta-img-button__label">お試しセットをチェック</span>
+        <span class="cta-img-button__arrow" aria-hidden="true"></span>
+      </a>
+    </div>
+
+
+    <!-- Section 05: article_body [ARTICLE_HTML] -->
+    <div class="section-html section-html--article section-html--article-body section-html--article-body-n5   " data-section="5" data-template="article-body">
+<article class="article-block article-block--article-body">
+<div class="article-paragraphs "><p>このシリーズを選ぶときに、<br><span class="article-em article-em--marker">大切にしたいこと</span>は3つ。</p></div>
+<figure class="article-point-visual image-made-visual">
+      <img src="assets/article/visual_05.webp?v=1791193173483" alt="記事内のポイント整理画像" class="article-point-visual__img" width="1672" height="941" loading="lazy" fetchpriority="low" decoding="async">
+      
+      
+    </figure>
+</article>
+    </div>
+
+    <!-- Section 06: article_body [ARTICLE_HTML] -->
+    <div class="section-html section-html--article section-html--article-body section-html--article-body-n6   " data-section="6" data-template="article-body">
+<article class="article-block article-block--article-body">
+<div class="article-paragraphs "><p>日々のケアだからこそ、<br>配合成分にも目を向けたい。</p>
+<p><span class="article-em article-em--marker">トリートメントの補修成分</span>は、<br>こんな組み合わせです。</p></div>
+</article>
+    </div>
+
+    <!-- Section 07: science_basis [IMAGE] -->
+    <img src="assets/section_07_science_basis.webp?v=1791192809014" alt="PLEX SHOT※ | ジマレイン酸シスタミン / マレイン酸 / グルタチオン / 毛髪補修成分の組み合わせ" class="section-img" width="941" height="1672" loading="lazy" fetchpriority="low" decoding="async" id="section-07" data-section="7">
+    <div class="article-legal-notes article-legal-notes--image"><p>※独自処方とは、ジマレイン酸シスタミン・マレイン酸・グルタチオン（毛髪補修成分）の配合バランスを指します。</p>
+<p>※引用元：公式商品ページ／取得した2026年10月時点。</p></div>
+
+    <!-- Section 08: science_basis [IMAGE] -->
+    <img src="assets/section_08_science_basis.webp?v=1791192849273" alt="シャンプーにも、 補修成分という選択 | ケラチン由来の 補修成分※を配合" class="section-img" width="1672" height="941" loading="lazy" fetchpriority="low" decoding="async" id="section-08" data-section="8">
+    <div class="article-legal-notes article-legal-notes--image"><p>※ココイル加水分解ケラチンK（羊毛）（補修成分）。</p>
+<p>※引用元：公式シャンプー商品ページ／取得した2026年10月時点。</p></div>
+
+    <!-- Section 09: article_body [ARTICLE_HTML] -->
+    <div class="section-html section-html--article section-html--article-body section-html--article-body-n9   " data-section="9" data-template="article-body">
+<article class="article-block article-block--article-body">
+<div class="article-paragraphs "><p>成分を知ることも、<br><span class="article-em article-em--magenta">髪をいたわる習慣</span>のひとつに。</p>
+<p>続いて、使い方にも<br>大切にしたい手順があります。</p></div>
+</article>
+    </div>
+
+    <!-- Section 10: convenience [IMAGE] -->
+    <img src="assets/section_10_convenience.webp?v=1791193490943" alt="泡をなじませ、 3分そのまま | しっかりすすぐ / その後は、水を切らずに トリートメントを塗布" class="section-img" width="941" height="1672" loading="lazy" fetchpriority="low" decoding="async" id="section-10" data-section="10">
+    <div class="article-legal-notes article-legal-notes--image"><p>※3分は使用手順であり、効果が出るまでの時間を示すものではありません。</p>
+<p>※使用方法・使用量は商品ページおよび同梱資料をご確認ください。引用元：公式商品ページ／取得した2026年10月時点。</p></div>
+
+
+    <!-- CTA: cta2 -->
+    <div class="cta-section visible" style="background: #302D2A; --cta-section-text: #FFFFFF;">
+      <a href="https://shop.kaminidoramawo.jp/shop/products/tr_tri_ast_ver1_sac" class="cta-img-button cta-img-button--html cta-img-button--animated" aria-label="お試しセットをチェック" style="--cta-shine-mask: url(&quot;assets/cta/cta_button.png&quot;); --cta-button-aspect: 6.0371; --cta-button-bg: #19A85B; --cta-button-bg-top: #42B879; --cta-button-bg-bottom: #16904E; --cta-button-text: #FFFFFF; --cta-button-arrow: #302D2A;">
+        <img src="assets/cta/cta_button.png?v=1791193099186" alt="お試しセットをチェック" class="cta-button-img" width="2113" height="350" loading="lazy" fetchpriority="low" decoding="async">
+        <span class="cta-img-button__surface" aria-hidden="true"></span>
+        <span class="cta-img-button__label">お試しセットをチェック</span>
+        <span class="cta-img-button__arrow" aria-hidden="true"></span>
+      </a>
+    </div>
+
+
+    <!-- Section 11: article_body [ARTICLE_HTML] -->
+    <div class="section-html section-html--article section-html--article-body section-html--article-body-n11   " data-section="11" data-template="article-body">
+<article class="article-block article-block--article-body">
+<div class="article-paragraphs "><p>この手順を、<br>日々のバスタイムに。</p>
+<p>さらに、<span class="article-em article-em--marker">髪質や仕上がりの好み</span>に<br>合わせて選べるラインも。</p>
+<p>まずは使い心地を試したい方には、</p></div>
+<figure class="article-point-visual image-made-visual">
+      <img src="assets/article/visual_11.webp?v=1791193570083" alt="記事内のポイント整理画像" class="article-point-visual__img" width="1086" height="1448" loading="lazy" fetchpriority="low" decoding="async">
+      
+      <div class="article-legal-notes article-legal-notes--anchored"><p>※対象区分は公式商品ページの掲載内容。仕上がり・使用感には個人差があります。取得した2026年10月時点。</p></div>
+    </figure>
+</article>
+    </div>
+
+    <!-- Section 12: pricing [IMAGE] -->
+    <img src="assets/section_12_pricing.webp?v=1791192989379" alt="日々のケアを、 トライアルセットから | つるりんちょ。トライアルセット / 2種のシャンプー＋ 3種のトリートメント / リセットケア付き / 2,200円（税込） / ミディアムヘアで約12回分" class="section-img" width="941" height="1672" loading="lazy" fetchpriority="low" decoding="async" id="section-12" data-section="12">
+    <div class="article-legal-notes article-legal-notes--image"><p>※初回限定・お一人様一回限り。定期購入対象外。</p>
+<p>※約12回分はミディアムヘアでの目安。使用量・髪の長さで異なります。</p>
+<p>※REGULARシャンプー＋REGULARトリートメント、REGULARシャンプー＋AIRトリートメント、REPAIRシャンプー＋REPAIRトリートメントのサシェ各2個。シャンプー各10mL／トリートメント各10g。「つるりんちょ。の素」10g単包1個。</p>
+<p>※価格・構成は公式商品ページ／取得した2026年10月時点。</p></div>
+
+    <!-- Section 13: features [IMAGE] -->
+    <img src="assets/section_13_features.webp?v=1791193061044" alt="最初のケアには、 セットだけのひと手間 | 「つるりんちょ。の素」付き その後は、あなたの髪で 香り・泡立ち・なじみ方を" class="section-img" width="1086" height="1448" loading="lazy" fetchpriority="low" decoding="async" id="section-13" data-section="13">
+    <div class="article-legal-notes article-legal-notes--image"><p>※最初のリセットケアでは、シャンプー5mLと「つるりんちょ。の素」5gを混ぜて使用。詳しい使用手順は同梱資料をご確認ください。</p>
+<p>※使用感・仕上がりには個人差があります。公式商品ページ／取得した2026年10月時点。</p></div>
+
+
+    <!-- CTA: cta3 -->
+    <div class="cta-section visible" style="background: #302D2A; --cta-section-text: #FFFFFF;">
+      <a href="https://shop.kaminidoramawo.jp/shop/products/tr_tri_ast_ver1_sac" class="cta-img-button cta-img-button--html cta-img-button--animated" aria-label="お試しセットをチェック" style="--cta-shine-mask: url(&quot;assets/cta/cta_button.png&quot;); --cta-button-aspect: 6.0371; --cta-button-bg: #19A85B; --cta-button-bg-top: #42B879; --cta-button-bg-bottom: #16904E; --cta-button-text: #FFFFFF; --cta-button-arrow: #302D2A;">
+        <img src="assets/cta/cta_button.png?v=1791193099186" alt="お試しセットをチェック" class="cta-button-img" width="2113" height="350" loading="lazy" fetchpriority="low" decoding="async">
+        <span class="cta-img-button__surface" aria-hidden="true"></span>
+        <span class="cta-img-button__label">お試しセットをチェック</span>
+        <span class="cta-img-button__arrow" aria-hidden="true"></span>
+      </a>
+    </div>
+
+
+    <!-- Section 14: article_body [ARTICLE_HTML] -->
+    <div class="section-html section-html--article section-html--article-body section-html--article-body-n14   " data-section="14" data-template="article-body">
+<article class="article-block article-block--article-body">
+<div class="article-paragraphs "><p>このひと手間から、<br>髪をいたわる時間を日常に。</p>
+<p>香りや洗い上がりの好みは、<br><span class="article-em article-em--marker">ご自身の髪で試して</span>選ぶ。</p>
+<p>ひと箱で組み合わせを比べながら、<br>お気に入りのケアを探すひとときを。</p>
+<p>まずは<span class="article-em article-em--red">トライアルセット</span>で、<br>いつものバスタイムから始めませんか。</p></div>
+<figure class="article-point-visual image-made-visual">
+      <img src="assets/article/visual_14.webp?v=1791193303782" alt="記事内のポイント整理画像" class="article-point-visual__img" width="941" height="1672" loading="lazy" fetchpriority="low" decoding="async">
+      
+      <div class="article-legal-notes article-legal-notes--anchored"><p>※各組み合わせのサシェ2個入り。初回限定・お一人様一回限りの単品購入で、定期契約ではありません。</p>
+<p>※使用感・仕上がりには個人差があります。公式商品ページ／取得した2026年10月時点。</p></div>
+    </figure>
+</article>
+    </div>
+
+
+    <!-- CTA: cta4 -->
+    <div class="downArrow" aria-hidden="true"><span></span><span></span><span></span></div>
+    <div class="cta-section visible" style="background: #302D2A; --cta-section-text: #FFFFFF;">
+      <a href="https://shop.kaminidoramawo.jp/shop/products/tr_tri_ast_ver1_sac" class="cta-img-button cta-img-button--html cta-img-button--animated" aria-label="お試しセットをチェック" style="--cta-shine-mask: url(&quot;assets/cta/cta_button.png&quot;); --cta-button-aspect: 6.0371; --cta-button-bg: #19A85B; --cta-button-bg-top: #42B879; --cta-button-bg-bottom: #16904E; --cta-button-text: #FFFFFF; --cta-button-arrow: #302D2A;">
+        <img src="assets/cta/cta_button.png?v=1791193099186" alt="お試しセットをチェック" class="cta-button-img" width="2113" height="350" loading="lazy" fetchpriority="low" decoding="async">
+        <span class="cta-img-button__surface" aria-hidden="true"></span>
+        <span class="cta-img-button__label">お試しセットをチェック</span>
+        <span class="cta-img-button__arrow" aria-hidden="true"></span>
+      </a>
+    </div>
+
+
+    <!-- Section 15: footer [HTML: footer] -->
+    <div class="section-html section-html--footer section-html--footer-n15  section-html--bg-alt " data-section="15" data-template="footer">
+<!-- ========== Section Template: L-footer (Jinja2) ========== -->
+<!-- 用途: フッターセクション（ロゴ・会社情報・リンク・copyright） -->
+<!-- Variables:
+  - color_map: dict of CSS variable name → value
+  - logo_image: str — ロゴ画像src
+  - logo_alt: str — ロゴalt属性
+  - company_name: str — 会社名/学校名
+  - links: list of dicts — [{url: "https://...", text: "プライバシーポリシー"}, ...]
+  - copyright_year: str — copyright年 (例: 2026)
+  - copyright_org: str — copyright組織名 (例: WATER STAND)
+  - footer_tone: str — "calm" / "quiet" の場合、会社名とリンクだけ明朝体
+  - footer_surface: str — 後方互換用。Footer は全LPでプライマリーカラー背景
+-->
+
+
+
+<!-- Section Template: L-footer -->
+
+
+<footer class="sec-footer sec-footer--light sec-footer--article">
+  <!-- ロゴ -->
+  
+
+  <!-- 会社名/学校名 -->
+  <p class="sec-footer__company">株式会社髪にドラマを</p>
+
+  <!-- リンク -->
+  
+  <div class="sec-footer__links">
+    
+    
+    
+    <a href="https://shop.kaminidoramawo.jp/shop/law_info" target="_blank" rel="noopener">会社情報・特定商取引法に基づく表記</a>
+    
+    
+    
+    <a href="https://shop.kaminidoramawo.jp/shop/privacy" target="_blank" rel="noopener">プライバシーポリシー</a>
+    
+  </div>
+  
+
+  <!-- Copyright -->
+  <p class="sec-footer__copyright">
+    &copy; 2026 髪にドラマを All Rights Reserved.
+  </p>
+</footer>
+    </div>
+
+    <!-- Sticky CTA -->
+    <div class="sticky-cta sticky-cta--article" id="stickyCta">
+      <a href="https://shop.kaminidoramawo.jp/shop/products/tr_tri_ast_ver1_sac" class="sticky-img-button" aria-label="お試しセットをチェック" style="--cta-shine-mask: url(&quot;assets/cta/cta_button.png&quot;); --cta-button-aspect: 6.0371; --cta-button-bg: #19A85B; --cta-button-bg-top: #42B879; --cta-button-bg-bottom: #16904E; --cta-button-text: #FFFFFF; --cta-button-arrow: #302D2A;">
+        <img src="assets/cta/cta_button.png?v=1791193099186" alt="お試しセットをチェック" class="sticky-button-img" width="2113" height="350" loading="lazy" fetchpriority="low" decoding="async">
+        <span class="cta-img-button__surface" aria-hidden="true"></span>
+        <span class="cta-img-button__label">お試しセットをチェック</span>
+        <span class="cta-img-button__arrow" aria-hidden="true"></span>
+      </a>
+    </div>
+  </div>
+
+  <script>
+    // FAQ アコーディオン
+    document.querySelectorAll('.faq-question').forEach(q => {
+      q.addEventListener('click', () => {
+        const item = q.parentElement;
+        const answer = item.querySelector('.faq-answer');
+        const isOpen = item.classList.contains('open');
+        document.querySelectorAll('.faq-item.open').forEach(o => {
+          o.classList.remove('open');
+          o.querySelector('.faq-answer').style.maxHeight = '0';
+        });
+        if (!isOpen) { item.classList.add('open'); answer.style.maxHeight = answer.scrollHeight + 'px'; }
+      });
+    });
+
+
+
+    // Sticky CTA（FV を過ぎたら表示）
+    const stickyCta = document.getElementById('stickyCta');
+    if (stickyCta) {
+      const sObs = new IntersectionObserver(
+        es => es.forEach(e => stickyCta.classList.toggle('visible', !e.isIntersecting)),
+        { threshold: 0 }
+      );
+      const fv = document.querySelector('.section-img');
+      if (fv) sObs.observe(fv);
+    }
+  </script>
+</body>
+</html>
